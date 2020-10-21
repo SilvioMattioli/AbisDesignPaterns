@@ -1,13 +1,17 @@
 package be.abis.exercise.one;
 
 abstract class Shape {
-    protected final String color;
+    private String color;
 
-    protected Shape(String color) {
-        this.color = color;
+    protected Shape() {
     }
 
     protected abstract double getArea();
 
-    protected abstract String color();
+    public String getColor() {
+        return color;
+    }
+    public void setColor(String color) {
+        this.color = color;
+    }
 }

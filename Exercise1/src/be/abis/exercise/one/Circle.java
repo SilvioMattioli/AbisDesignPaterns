@@ -2,21 +2,16 @@ package be.abis.exercise.one;
 
 public class Circle extends Shape {
 
-    private double radius;
+    private final double radius;
 
     public Circle(String color, double radius) {
-        super(color);
+        super.setColor(color);
         this.radius = radius;
     }
 
     @Override
     protected double getArea() {
-        return 2.0;
-    }
-
-    @Override
-    protected String color() {
-        return super.color;
+        return Math.PI * Math.pow(radius, 2);
     }
 
     public double getRadius(){

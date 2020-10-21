@@ -6,18 +6,18 @@ public class Client {
 
     public static void main(String[] args) {
 
-        ArrayList<Rectangle> rectangles = new ArrayList<>();
-        ArrayList<Circle> circles = new ArrayList<>();
+        ArrayList<Shape> Shapes = new ArrayList<>();
 
-        rectangles.add(new Rectangle("blue",3.0,5.0));
-        rectangles.add(new Rectangle("red",6.0,5.0));
-        rectangles.add(new Rectangle("green",7.0,5.0));
+        Shapes.add(new Rectangle("blue",3.0,5.0));
+        Shapes.add(new Rectangle("red",6.0,5.0));
+        Shapes.add(new Rectangle("green",7.0,5.0));
 
-        circles.add(new Circle("purple",50.6));
-        circles.add(new Circle("yellow",50.6));
-        circles.add(new Circle("white",50.6));
+        Shapes.add(new Circle("purple",50.6));
+        Shapes.add(new Circle("yellow",25.5));
+        Shapes.add(new Circle("white",10.6));
 
-        rectangles.forEach(shape -> System.out.println(shape.getArea() +" "+ shape.color +" "+ shape.getWidth()));
-        circles.forEach(circle -> System.out.println(circle.getArea() + " " +circle.color + " " +circle.getRadius()));
+        Shapes.stream().filter(shape -> shape.getClass().equals(Rectangle.class)).forEach(shape -> System.out.println(shape.getArea() +" "+ shape.getColor() +" "+ ((Rectangle) shape).getHeight() +" "+ ((Rectangle) shape).getWidth()) );
+        Shapes.stream().filter(shape -> shape.getClass().equals(Circle.class)).forEach(shape -> System.out.println(shape.getArea() +" "+ shape.getColor() +" "+ ((Circle) shape).getRadius()));
+
     }
 }
