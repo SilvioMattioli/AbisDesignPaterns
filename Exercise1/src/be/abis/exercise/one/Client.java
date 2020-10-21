@@ -6,18 +6,18 @@ public class Client {
 
     public static void main(String[] args) {
 
-        ArrayList<Shape> Shapes = new ArrayList<>();
+        ArrayList<Shape> shapes = new ArrayList<>();
 
-        Shapes.add(new Rectangle("blue",3.0,5.0));
-        Shapes.add(new Rectangle("red",6.0,5.0));
-        Shapes.add(new Rectangle("green",7.0,5.0));
+        shapes.add(new Rectangle("blue",new Point(),3.0,5.0));
+        shapes.add(new Rectangle("red",new Point(),6.0,5.0));
+        shapes.add(new Rectangle("green",new Point(),7.0,5.0));
 
-        Shapes.add(new Circle("purple",50.6));
-        Shapes.add(new Circle("yellow",25.5));
-        Shapes.add(new Circle("white",10.6));
+        shapes.add(new Circle("purple",new Point(),50.6));
+        shapes.add(new Circle("yellow",new Point(),25.5));
+        shapes.add(new Circle("white",new Point(),10.6));
 
-        Shapes.stream().filter(shape -> shape.getClass().equals(Rectangle.class)).forEach(shape -> System.out.println(shape.getArea() +" "+ shape.getColor() +" "+ ((Rectangle) shape).getHeight() +" "+ ((Rectangle) shape).getWidth()) );
-        Shapes.stream().filter(shape -> shape.getClass().equals(Circle.class)).forEach(shape -> System.out.println(shape.getArea() +" "+ shape.getColor() +" "+ ((Circle) shape).getRadius()));
+        shapes.forEach(shape -> System.out.println("color: "+shape.getColor() +" and the area is:  "+ shape.area() + " and measurements are: "+ shape.toString()));
+
 
     }
 }

@@ -1,17 +1,29 @@
 package be.abis.exercise.one;
 
 abstract class Shape {
-    private String color;
+    protected String color;
+    protected Point origin;
 
-    protected Shape() {
+    public Shape(String color, Point origin) {
+        this.color = color;
+        this.origin = origin;
     }
 
-    protected abstract double getArea();
+    protected abstract double area();
 
-    public String getColor() {
+    protected String getColor() {
         return color;
     }
+
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public Point getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(Point origin) {
+        this.origin = origin;
     }
 }

@@ -6,14 +6,14 @@ public class Rectangle extends Shape {
 
     private final double width;
 
-    public Rectangle(String color,double height, double width) {
-        super.setColor(color);
+    public Rectangle(String color,Point point,double height, double width) {
+        super(color,point);
         this.height = height;
         this.width = width;
     }
 
     @Override
-    protected double getArea() {
+    protected double area() {
         return (height * width);
     }
 
@@ -25,9 +25,16 @@ public class Rectangle extends Shape {
         return width;
     }
 
-    @Override
     public String getColor() {
         return super.getColor();
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "height=" + height +
+                ", width=" + width +
+                '}';
     }
 }
 
