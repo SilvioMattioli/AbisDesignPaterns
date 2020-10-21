@@ -4,8 +4,8 @@ public class Circle extends Shape {
 
     private double radius;
 
-    public Circle(String color,Point point,double radius) {
-        super(color,point);
+    public Circle(String color, Point point, double radius) {
+        super(color, point);
         this.radius = radius;
     }
 
@@ -14,7 +14,7 @@ public class Circle extends Shape {
         return Math.round(Math.PI * Math.pow(radius, 2));
     }
 
-    public double getRadius(){
+    public double getRadius() {
         return radius;
     }
 

@@ -9,8 +9,6 @@ abstract class Shape {
         this.origin = origin;
     }
 
-    protected abstract double area();
-
     protected String getColor() {
         return color;
     }
@@ -26,4 +24,6 @@ abstract class Shape {
     public void setOrigin(Point origin) {
         this.origin = origin;
     }
+
+    protected abstract double area();
 }
