@@ -20,6 +20,6 @@ public class Circle extends Shape {
     }
 
     public double getRadius(){
-        return 2.0;
+        return radius;
     }
 }
