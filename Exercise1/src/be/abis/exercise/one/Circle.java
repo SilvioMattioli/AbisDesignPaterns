@@ -19,7 +19,7 @@ public class Circle extends Shape {
         return super.color;
     }
 
-    private double getRadius(){
+    public double getRadius(){
         return 2.0;
     }
 }

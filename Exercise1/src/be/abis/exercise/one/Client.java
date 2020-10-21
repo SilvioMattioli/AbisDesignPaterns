@@ -18,6 +18,6 @@ public class Client {
         circles.add(new Circle("white",50.6));
 
         rectangles.forEach(shape -> System.out.println(shape.getArea() +" "+ shape.color +" "+ shape.getWidth()));
-        circles.forEach(circle -> System.out.println(circle.getArea() + "" +circle.color));
+        circles.forEach(circle -> System.out.println(circle.getArea() + " " +circle.color + " " +circle.getRadius()));
     }
 }
