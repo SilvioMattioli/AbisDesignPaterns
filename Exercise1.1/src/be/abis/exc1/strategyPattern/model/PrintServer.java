@@ -14,14 +14,11 @@ public class PrintServer extends Node {
     void receive(Packet packet) {
         System.out.println("has arrived at " + this.getAddress());
         if(packet.getDestinationAddress().equals(this.getAddress())){
-           print(packet);
+            this.printStrategy.print(packet);
         }
         else{
             this.send(packet);
         }
     }
 
-    public void print(Packet packet){
-       printStrategy.print(packet);
-    }
 }

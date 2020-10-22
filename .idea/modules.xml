@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AbisDesignPaterns.iml" filepath="$PROJECT_DIR$/.idea/AbisDesignPaterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercise1/Exercise1.iml" filepath="$PROJECT_DIR$/Exercise1/Exercise1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercise1.1/Exercise1.1.iml" filepath="$PROJECT_DIR$/Exercise1.1/Exercise1.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld/HelloWorld.iml" />
-      <module fileurl="file://$PROJECT_DIR$/StrategyPatternExc/StrategyPatternExc.iml" filepath="$PROJECT_DIR$/StrategyPatternExc/StrategyPatternExc.iml" />
     </modules>
   </component>
 </project>

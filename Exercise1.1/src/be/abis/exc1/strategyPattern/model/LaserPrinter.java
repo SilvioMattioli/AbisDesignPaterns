@@ -1,9 +1,8 @@
-package be.abis.exc1.strategyPattern;
+package be.abis.exc1.strategyPattern.model;
 
-import be.abis.exc1.strategyPattern.model.Packet;
-import be.abis.exc1.strategyPattern.model.PrintStrategy;
-
-public class threeDPrinter implements PrintStrategy {
+public class LaserPrinter implements PrintStrategy {
+    public LaserPrinter() {
+    }
 
     @Override
     public void print(Packet packet) {

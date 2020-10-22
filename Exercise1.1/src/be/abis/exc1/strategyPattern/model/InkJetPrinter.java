@@ -1,6 +1,8 @@
 package be.abis.exc1.strategyPattern.model;
 
-public class LaserPrinter implements PrintStrategy {
+public class InkJetPrinter implements PrintStrategy {
+    public InkJetPrinter() {
+    }
 
     @Override
     public void print(Packet packet) {

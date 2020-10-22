@@ -6,12 +6,15 @@ public class StrategyTest {
 
     public static void main(String[] args) {
         Packet packet = new Packet("p1", "this message has arrived");
+        Packet packet2 = new Packet("p2", "this message has arrived");
 
         WorkStation w1 = new WorkStation("w1");
-        PrintServer p1 = new PrintServer("p1",new InkJetPrinter());
+        InkJetPrinter inkJetPrinter = new InkJetPrinter();
+        PrintServer p1 = new PrintServer("p1", inkJetPrinter);
         Node n1 = new Node("n1");
         Node n2 = new Node("n2");
-        PrintServer p2 = new PrintServer("p2",new LaserPrinter());
+        LaserPrinter laserPrinter = new LaserPrinter();
+        PrintServer p2 = new PrintServer("p2", laserPrinter);
         Node n3 = new Node("n3");
 
 
@@ -28,6 +31,7 @@ public class StrategyTest {
 
 
         w1.originate(packet);
+        w1.originate(packet2);
 
 
 
