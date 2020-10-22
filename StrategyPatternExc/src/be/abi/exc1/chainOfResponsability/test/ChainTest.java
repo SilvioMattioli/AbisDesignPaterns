@@ -25,6 +25,7 @@ public class ChainTest {
         n1.setNextComponent(n2);
         n2.setNextComponent(p2);
         p2.setNextComponent(n3);
+        n3.setNextComponent(w1);
 
 
 

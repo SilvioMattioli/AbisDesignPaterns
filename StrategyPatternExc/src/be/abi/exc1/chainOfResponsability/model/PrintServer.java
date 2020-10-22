@@ -13,11 +13,11 @@ public class PrintServer extends Node {
            print(packet);
         }
         else{
-            this.getNextComponent().receive(packet);
+            super.send(packet);
         }
     }
 
     public void print(Packet packet){
-        System.out.println(packet.getContents());
+        System.out.println(packet.getContents() +" at "+ this.getAddress() + " and is originated from "+ this.getClass().getSimpleName());
     }
 }
