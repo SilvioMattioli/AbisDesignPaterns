@@ -8,6 +8,7 @@ public class PrintServer extends Node {
 
     @Override
     void receive(Packet packet) {
+        System.out.println("has arrived at " + this.getAddress());
         if(packet.getDestinationAddress().equals(this.getAddress())){
            print(packet);
         }
