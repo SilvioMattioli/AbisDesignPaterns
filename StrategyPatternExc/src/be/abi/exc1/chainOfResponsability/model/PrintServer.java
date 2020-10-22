@@ -13,7 +13,7 @@ public class PrintServer extends Node {
            print(packet);
         }
         else{
-            super.send(packet);
+            this.send(packet);
         }
     }
 

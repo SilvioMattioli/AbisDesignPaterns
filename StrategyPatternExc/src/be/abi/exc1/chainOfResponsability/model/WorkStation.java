@@ -8,6 +8,6 @@ public class WorkStation extends Node {
     }
 
     public void originate(Packet packet){
-        super.send(packet);
+        this.send(packet);
     }
 }
