@@ -3,7 +3,7 @@ package be.abis.exc1.strategyPattern;
 import be.abis.exc1.strategyPattern.model.Packet;
 import be.abis.exc1.strategyPattern.model.PrintStrategy;
 
-public class threeDPrinter extends PrintStrategy {
+public class threeDPrinter implements PrintStrategy {
 
     @Override
     public void print(Packet packet) {

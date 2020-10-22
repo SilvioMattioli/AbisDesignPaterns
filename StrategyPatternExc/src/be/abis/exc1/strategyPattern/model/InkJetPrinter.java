@@ -1,6 +1,6 @@
 package be.abis.exc1.strategyPattern.model;
 
-public class InkJetPrinter extends PrintStrategy {
+public class InkJetPrinter implements PrintStrategy {
 
     @Override
     public void print(Packet packet) {

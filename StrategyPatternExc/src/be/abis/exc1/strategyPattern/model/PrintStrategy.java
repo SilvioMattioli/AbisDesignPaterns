@@ -1,6 +1,6 @@
 package be.abis.exc1.strategyPattern.model;
 
-public class PrintStrategy {
+public interface PrintStrategy {
 
-    public void print(Packet packet){}
+    void print(Packet packet);
 }
