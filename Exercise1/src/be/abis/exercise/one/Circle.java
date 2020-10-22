@@ -8,6 +8,10 @@ public class Circle extends Shape {
         super(color, point);
         this.radius = radius;
     }
+    public Circle(String color, Point point, double radius, String ... something ) {
+        super(color, point);
+        this.radius = radius;
+    }
 
     @Override
     protected double area() {
