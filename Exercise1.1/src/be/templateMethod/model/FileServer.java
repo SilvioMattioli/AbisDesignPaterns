@@ -21,6 +21,16 @@ public class FileServer extends PacketHandler {
     @Override
     void receive(Packet packet) {
         super.receive(packet);
+
+    }
+
+    @Override
+    void print(Packet packet) {
+
+    }
+
+    @Override
+    void save(Packet packet) {
         files.forEach(file -> System.out.println(file.getPacket().getContents() +" is Already Added in FileServer"));
         this.files.add(new File(packet));
         System.out.println(packet.getContents() +" has been saved in FileServer");

@@ -21,6 +21,14 @@ public class MQServer extends PacketHandler {
     @Override
     void receive(Packet packet) {
         super.receive(packet);
+    }
+    @Override
+    void print(Packet packet) {
+
+    }
+
+    @Override
+    void save(Packet packet) {
         messages.forEach(file -> System.out.println(file +" is Already Added in MQServer"));
         this.messages.add(packet.getContents());
         System.out.println(packet.getContents() + " has been added to MQServer");

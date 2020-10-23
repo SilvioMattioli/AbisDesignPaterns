@@ -12,10 +12,16 @@ public class PrintServer extends PacketHandler {
 
     @Override
     void receive(Packet packet) {
-        if (packet.getDestinationAddress().equals(this.getAddress())) {
-            this.printStrategy.print(packet);
-        } else {
-            this.send(packet);
-        }
+        super.receive(packet);
+    }
+
+    @Override
+    void print(Packet packet) {
+        this.printStrategy.print(packet);
+    }
+
+    @Override
+    void save(Packet packet) {
+
     }
 }

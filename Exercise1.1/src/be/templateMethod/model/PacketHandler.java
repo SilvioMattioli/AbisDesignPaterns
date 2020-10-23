@@ -8,7 +8,8 @@ public abstract class PacketHandler extends Node {
 
 
     public final void handlePacket(Packet packet){
-        receive(packet);
+        save(packet);
+        print(packet);
     }
     @Override
     void send(Packet packet) {
@@ -17,6 +18,14 @@ public abstract class PacketHandler extends Node {
 
     @Override
     void receive(Packet packet) {
-        super.receive(packet);
+        if (packet.getDestinationAddress().equals(this.getAddress())) {
+            this.handlePacket(packet);
+        }
+        else{
+            this.send(packet);
+        }
     }
+
+    abstract void print (Packet packet);
+    abstract void save (Packet packet);
 }
