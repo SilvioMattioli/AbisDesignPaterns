@@ -19,9 +19,10 @@ public abstract class PacketHandler extends Node {
     @Override
     void receive(Packet packet) {
         if (packet.getDestinationAddress().equals(this.getAddress())) {
-            this.handlePacket(packet);
+            handlePacket(packet);
         }
         else{
+            handlePacket(packet);
             this.send(packet);
         }
     }
