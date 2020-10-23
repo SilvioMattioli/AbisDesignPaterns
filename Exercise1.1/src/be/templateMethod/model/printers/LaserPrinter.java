@@ -8,6 +8,6 @@ public class LaserPrinter implements PrintStrategy {
 
     @Override
     public void print(Packet packet) {
-        System.out.println(packet.getContents() +" at "+ packet.getDestinationAddress() + " and is originated from "+ this.getClass().getSimpleName());
+        System.out.println(packet.getContents() +" has arrived at "+ packet.getDestinationAddress() + " is printed and is originated from "+ this.getClass().getSimpleName());
     }
 }

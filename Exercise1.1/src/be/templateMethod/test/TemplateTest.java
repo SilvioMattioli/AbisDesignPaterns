@@ -8,9 +8,9 @@ import be.templateMethod.model.printers.LaserPrinter;
 public class TemplateTest {
 
     public static void main(String[] args) {
-        Packet packet = new Packet("p1", "this message 1");
-        Packet packet2 = new Packet("p1", "this message  2");
-        Packet packet3 = new Packet("p2", "this message  3");
+        Packet packet = new Packet("p1", "this Packet 1");
+        Packet packet2 = new Packet("p1", "this Packet 2");
+        Packet packet3 = new Packet("p2", "this Packet 3");
 
         WorkStation w1 = new WorkStation("w1");
         InkJetPrinter inkJetPrinter = new InkJetPrinter();
