@@ -25,11 +25,11 @@ public class FileServer extends PacketHandler {
     }
 
     @Override
-    void print(Packet packet) {
-
+    public void handlePacket(Packet p) {
+        this.save(p);
     }
 
-    @Override
+
     void save(Packet packet) {
         files.forEach(file -> System.out.println(file.getPacket().getContents() +" is Already Added in FileServer"));
         this.files.add(new File(packet));

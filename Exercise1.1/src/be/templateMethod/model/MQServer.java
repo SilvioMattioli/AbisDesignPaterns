@@ -10,6 +10,7 @@ public class MQServer extends PacketHandler {
         super(address);
     }
 
+
     public Queue<String> getMessages() {
         return messages;
     }
@@ -22,12 +23,12 @@ public class MQServer extends PacketHandler {
     void receive(Packet packet) {
         super.receive(packet);
     }
-    @Override
-    void print(Packet packet) {
 
+    @Override
+    public void handlePacket(Packet p) {
+        save(p);
     }
 
-    @Override
     void save(Packet packet) {
         messages.forEach(file -> System.out.println(file +" is Already Added in MQServer"));
         this.messages.add(packet.getContents());

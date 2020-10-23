@@ -16,12 +16,13 @@ public class PrintServer extends PacketHandler {
     }
 
     @Override
+    public void handlePacket(Packet p) {
+        print(p);
+
+    }
+
     void print(Packet packet) {
         this.printStrategy.print(packet);
     }
 
-    @Override
-    void save(Packet packet) {
-
-    }
 }

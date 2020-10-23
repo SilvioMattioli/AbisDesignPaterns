@@ -7,15 +7,10 @@ public abstract class PacketHandler extends Node {
     }
 
 
-    public final void handlePacket(Packet packet){
-        save(packet);
-        print(packet);
-    }
     @Override
     void send(Packet packet) {
         super.send(packet);
     }
-
     @Override
     void receive(Packet packet) {
         if (packet.getDestinationAddress().equals(this.getAddress())) {
@@ -26,7 +21,5 @@ public abstract class PacketHandler extends Node {
             this.send(packet);
         }
     }
-
-    abstract void print (Packet packet);
-    abstract void save (Packet packet);
+    public abstract void handlePacket(Packet p);
 }
