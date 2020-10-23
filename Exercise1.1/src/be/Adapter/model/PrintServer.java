@@ -1,4 +1,4 @@
-package be.templateMethod.model;
+package be.Adapter.model;
 
 public class PrintServer extends PacketHandler {
 
@@ -9,8 +9,6 @@ public class PrintServer extends PacketHandler {
         super(address);
         this.printStrategy = printStrategy;
     }
-
-
 
     @Override
     public void handlePacket(Packet p) {

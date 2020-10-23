@@ -1,4 +1,4 @@
-package be.templateMethod.model;
+package be.Adapter.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,6 @@ public class FileServer extends PacketHandler {
     public void setFiles(List<File> files) {
         this.files = files;
     }
-
 
 
     @Override

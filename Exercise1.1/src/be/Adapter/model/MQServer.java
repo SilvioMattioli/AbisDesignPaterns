@@ -1,4 +1,4 @@
-package be.templateMethod.model;
+package be.Adapter.model;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -18,6 +18,7 @@ public class MQServer extends PacketHandler {
     public void setMessages(Queue<String> messages) {
         this.messages = messages;
     }
+
 
 
     @Override
