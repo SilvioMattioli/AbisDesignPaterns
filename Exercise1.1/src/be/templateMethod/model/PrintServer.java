@@ -12,7 +12,6 @@ public class PrintServer extends PacketHandler {
 
     @Override
     void receive(Packet packet) {
-        System.out.println("has arrived at " + this.getAddress());
         if (packet.getDestinationAddress().equals(this.getAddress())) {
             this.printStrategy.print(packet);
         } else {
